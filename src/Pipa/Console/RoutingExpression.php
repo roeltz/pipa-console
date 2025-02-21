@@ -3,9 +3,8 @@
 namespace Pipa\Console;
 use Pipa\Match\Expression;
 use Pipa\Match\Pattern;
-use Pipa\Parser\Match;
+use Pipa\Parser\Match as ParserMatch;
 use Pipa\Parser\Symbol\Regex;
-use Pipa\Parser\Symbol\Literal;
 use Pipa\Parser\Symbol\NonTerminal;
 use Pipa\Parser\Symbol\Quantified\ZeroOrOne;
 
@@ -21,7 +20,7 @@ class RoutingExpression extends Expression {
 		));
 	}
 	
-	function toPattern(Match $match) {
+	function toPattern(ParserMatch $match) {
 		$os = @$match->value['os']->value['content']->value;
 		$command = $match->value['command']->value;
 
