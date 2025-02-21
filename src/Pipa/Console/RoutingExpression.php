@@ -1,8 +1,8 @@
 <?php
 
 namespace Pipa\Console;
-use Pipa\Match\Expression;
-use Pipa\Match\Pattern;
+use Pipa\Matcher\Expression;
+use Pipa\Matcher\Pattern;
 use Pipa\Parser\Match as ParserMatch;
 use Pipa\Parser\Symbol\Regex;
 use Pipa\Parser\Symbol\NonTerminal;
